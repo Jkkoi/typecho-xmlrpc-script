@@ -21,8 +21,8 @@ content = {"post_type": "post", "title": args.title, "description": "", "mt_text
 
 with open(args.currentPath, "r", encoding="utf-8") as file:
     lines = file.readlines()
-    content["description"] = "".join(lines[:3:])
-    content["mt_text_more"] = "".join(lines[3::])
+    content["description"] = "".join(lines[:6:])
+    content["mt_text_more"] = "".join(lines[6::])
 
 Typecho_Server = xmlrpc.client.ServerProxy(ApiUrl)
 
