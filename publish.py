@@ -11,6 +11,7 @@ parser.add_argument('--currentPath', '-f', help='文件绝对路径', required=T
 parser.add_argument('--title', '-t', help='文章标题,留空取文件名')
 args = parser.parse_args()
 
+args.currentPath = args.currentPath[1:-1:]
 if args.title is None:
     dir_name, full_file_name = os.path.split(args.currentPath)
     file_name, file_ext = os.path.splitext(full_file_name)
